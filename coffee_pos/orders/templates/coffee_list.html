@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee POS</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to the Coffee Shop</h1>
+    <ul>
+        {% for coffee in coffees %}
+            <li>
+                {{ coffee.name }} - ${{ coffee.price }}
+                <form method="POST" action="{% url 'create_order' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="coffee_id" value="{{ coffee.id }}">
+                    <input type="number" name="quantity" min="1" value="1">
+                    <button type="submit">Order</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

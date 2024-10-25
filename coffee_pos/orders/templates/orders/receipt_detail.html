@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Receipt #{{ receipt.id }}</h1>
+    <p>Coffee: {{ receipt.order.coffee.name }}</p>
+    <p>Quantity: {{ receipt.order.quantity }}</p>
+    <p>Total Price: ${{ receipt.order.total_price }}</p>
+</body>
+</html>
