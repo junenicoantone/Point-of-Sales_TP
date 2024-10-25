@@ -3,6 +3,7 @@ from .models import Coffee, Order, Receipt
 
 def coffee_list(request):
     coffees = Coffee.objects.all()
+    print(coffees)
     return render(request, 'coffee_list.html', {'coffees': coffees})
 
 def create_order(request):
