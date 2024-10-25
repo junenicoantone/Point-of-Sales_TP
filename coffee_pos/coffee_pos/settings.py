@@ -74,13 +74,13 @@ WSGI_APPLICATION = 'coffee_pos.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
         # for origin and csrf_token in the forms
-        'https://etysf8hv-1zeodrom-eoh0zt6p1ea8.ac4-preview.marscode.dev'
+        'https://4sg4tonv-jegy4yzk-1047hx85g7m8.ac4-preview.marscode.dev'
     ]
 ALLOWED_HOSTS = [
         # name of the website with https
-        "https://etysf8hv-1zeodrom-eoh0zt6p1ea8.ac4-preview.marscode.dev",
+        "https://4sg4tonv-jegy4yzk-1047hx85g7m8.ac4-preview.marscode.dev",
         # with no https
-        "etysf8hv-1zeodrom-eoh0zt6p1ea8.ac4-preview.marscode.dev"
+        "4sg4tonv-jegy4yzk-1047hx85g7m8.ac4-preview.marscode.dev"
     ]
 
 # Database
